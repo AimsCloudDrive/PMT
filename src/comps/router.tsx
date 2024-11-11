@@ -17,14 +17,28 @@ type Route = {
   nav?: Funcable<Nav | [Nav, OcPromise<Nav>], [Router]>;
   path: string;
   view?: (router: Router) => any;
+  children?: Array<Route>;
+};
+
+type RouteMatch = {
+  matched: Route[];
+  route: Route;
 };
 
 type RouterProps = ComponentProps & {
-  routes: string;
+  routes: Array<Route>;
+  notMatchPage?: Funcable<JSX.Element>;
 };
 
 export class Router extends Component<RouterProps> {
   declare path: string;
+
+  @option()
+  @observer()
+  declare routes: Array<Route>;
+  @option()
+  @observer()
+  declare notMatchPage: Funcable<JSX.Element>;
 
   @observer()
   declare params: Record<string, any>;
@@ -33,7 +47,14 @@ export class Router extends Component<RouterProps> {
   declare postParams: Record<string, any>;
 
   @observer()
-  declare current: any;
+  declare current: RouteMatch;
+
+  @observer()
+  declare history: Array<RouteMatch>;
+
+  init(): void {
+    this.history = new Array();
+  }
 
   get location() {
     return this.getContext("location");
@@ -42,7 +63,14 @@ export class Router extends Component<RouterProps> {
   match(path: string) {}
 
   render() {
-    return <div className="router"></div>;
+    const {
+      view = typeof this.notMatchPage === "function"
+        ? this.notMatchPage
+        : this.notMatchPage
+        ? () => this.notMatchPage
+        : () => <div />,
+    } = this.current.route || {};
+    return <div className="router">{view(this)}</div>;
   }
   jump(link: string, params?: {}, postParams?: {}, overrideHash?: {}) {
     return this.location?.jump(link, params, postParams, overrideHash);
