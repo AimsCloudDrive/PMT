@@ -1,11 +1,6 @@
-import { createRoot } from "react-dom/client";
-import { StrictMode } from "react";
+/** @jsx createElement */
+import { createElement, render } from "@ocean/dom";
+import { App } from "./comps/App";
 import "./index.css";
-// import App from "./App.tsx";
-import { App } from "./comps/layout";
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <App app={{}} />
-  </StrictMode>
-);
+render(<App routes={[]} />, document.getElementById("root")!);

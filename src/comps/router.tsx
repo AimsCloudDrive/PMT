@@ -1,5 +1,4 @@
 import { Component, ComponentProps, option } from "@ocean/component";
-import { observer } from "@ocean/reaction";
 import { OcPromise } from "@ocean/promise";
 declare global {
   namespace Component {

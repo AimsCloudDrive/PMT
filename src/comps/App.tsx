@@ -1,5 +1,7 @@
+/**@jsx createElement */
+import { createElement } from "@ocean/dom";
 import { Component, ComponentProps } from "@ocean/component";
-import { Location } from "./location";
+import { Location } from "./Location";
 
 type AppProps = ComponentProps & { routes: any };
 
