@@ -19,17 +19,17 @@ importers:
         specifier: ^9.16.0
         version: 9.16.0
       '@ocean/common':
-        specifier: latest
-        version: 0.0.2
+        specifier: ^0.0.1
+        version: 0.0.1
       '@ocean/component':
-        specifier: latest
+        specifier: ^0.0.1
         version: 0.0.1
       '@ocean/dom':
-        specifier: latest
+        specifier: ^0.0.1
         version: 0.0.1
       '@ocean/reaction':
-        specifier: latest
-        version: 0.0.2
+        specifier: ^0.0.1
+        version: 0.0.1
       '@vitejs/plugin-react':
         specifier: ^4.3.4
         version: 4.3.4(vite@5.4.11)
@@ -402,17 +402,17 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@ocean/common@0.0.2':
-    resolution: {integrity: sha512-NfI5IPzScSTyBYBQkR5ANS7bteWmVm1IOmhFNE7XR8zzHB0KmJQCwgJ+tyY6Rd0007fpfs3sX2XWX9TPNdfnfQ==}
+  '@ocean/common@0.0.1':
+    resolution: {integrity: sha512-itwQ/esjpllAb8kbYNuOEQC9AuEu1x0TB51Vv5beh08Kbd3LeXaSJbu1xxnXqkc2eeFKj1hs9XXxEKLTVXyuQQ==}
 
   '@ocean/component@0.0.1':
-    resolution: {integrity: sha512-a+6ze9mKE2KGZr49DA5GYhsfmQ/cvmQ2Kt3+NmJkyO9wES32ppWABlSt+kqtYs5zgmBDsm/tgInF4WPOKlzLmg==}
+    resolution: {integrity: sha512-5g8BB3ENlkGjM0k3Nc/0G6+xP1sl8W/+1tEPyBX3KJYpP4AaOgToPw/+Em2dCJ4MNNoCZGTRlHqBqEVG/nFf+A==}
 
   '@ocean/dom@0.0.1':
-    resolution: {integrity: sha512-9QGJW91LkqDweLFais4WBWLNazpg/BIOTFM6fyLv/RIWK9F2iiW/8U0xxrZe+Y+V1Hrgt3mWAuO3r0IA3HnsCg==}
+    resolution: {integrity: sha512-dKlTp+7MMt2l9cK7awWcnlLumILIgWttfWwJ0hiJor4HdiWl4mUIN5JD2v3ljcyB9TDcq+EO61qIXRaad77b5A==}
 
-  '@ocean/reaction@0.0.2':
-    resolution: {integrity: sha512-5XX8oGRy4s6YbLlbu9/x7ldjpOgMmNQAO1S121p5gr015C9thLIBiJ3CYAYtGOKn/kmyycXkLrAR+pwno/ImFQ==}
+  '@ocean/reaction@0.0.1':
+    resolution: {integrity: sha512-1/mtn0Xbq9RVm+QQCoowGAIWT06PutxCw+SnD2tEoVM8kupXnkcEvftTfN1Nv14aApGaQHJlC8DBJWdtUXftjg==}
 
   '@rollup/rollup-android-arm-eabi@4.24.3':
     resolution: {integrity: sha512-ufb2CH2KfBWPJok95frEZZ82LtDl0A6QKTa8MoM+cWwDZvVGl5/jNb79pIhRvAalUu+7LD91VYR0nwRD799HkQ==}
@@ -1426,26 +1426,17 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@ocean/common@0.0.2':
-    dependencies:
-      '@ocean/common': 'pmt@file:'
+  '@ocean/common@0.0.1': {}
 
   '@ocean/component@0.0.1':
     dependencies:
-      '@ocean/common': 0.0.2
       '@ocean/component': 'pmt@file:'
-      '@ocean/reaction': 0.0.2
 
   '@ocean/dom@0.0.1':
     dependencies:
-      '@ocean/common': 0.0.2
-      '@ocean/component': 0.0.1
       '@ocean/dom': 'pmt@file:'
-      '@ocean/reaction': 0.0.2
 
-  '@ocean/reaction@0.0.2':
-    dependencies:
-      '@ocean/common': 0.0.2
+  '@ocean/reaction@0.0.1': {}
 
   '@rollup/rollup-android-arm-eabi@4.24.3':
     optional: true
