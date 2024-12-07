@@ -18,11 +18,12 @@ type LocationProps = ComponentProps & {
   url: string;
 };
 
+@component("location")
 export class Location extends Component<LocationProps> {
   @option("string")
   declare url: {};
 
-  @option()
+  @option("undefined")
   @observer()
   declare globalParamNames: Array<string>;
 
@@ -33,7 +34,7 @@ export class Location extends Component<LocationProps> {
   declare postParams: Record<string, any>;
 
   render() {
-    return <div className="location"></div>;
+    return <div class="location"></div>;
   }
   jump(link: string, params?: {}, postParams?: {}, overrideHash?: {}) {}
 }

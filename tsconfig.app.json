@@ -16,6 +16,8 @@
     "noEmit": true,
     "jsx": "react",
     "jsxFactory": "React.createElement",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
 
     /* Linting */
     "strict": true,

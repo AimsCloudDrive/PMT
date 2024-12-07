@@ -6,9 +6,9 @@ export default defineConfig({
   plugins: [
     react({
       jsxRuntime: "classic",
+      babel: {
+        plugins: [["@babel/plugin-proposal-decorators", { version: "legacy" }]],
+      },
     }),
   ],
-  build: {
-    sourcemap: true,
-  },
 });
