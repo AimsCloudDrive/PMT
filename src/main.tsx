@@ -14,9 +14,13 @@ import { observer } from "@ocean/reaction";
 
 @component("A")
 class A extends Component<{ AAA: number; class: ClassType } & ComponentProps> {
-  @option()
   @observer()
+  @option()
   AAA: number | undefined;
+
+  init(): void {
+    this.AAA = 2;
+  }
 
   render() {
     return <div class={this.getClassName()}>{this.AAA}</div>;
