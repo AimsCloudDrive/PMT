@@ -7,7 +7,14 @@ export default defineConfig({
     react({
       jsxRuntime: "classic",
       babel: {
-        plugins: [["@babel/plugin-proposal-decorators", { version: "legacy" }]],
+        targets: ["defaults"],
+        exclude: "node_modules/**",
+        presets: ["@babel/preset-env", "@babel/preset-typescript"],
+        plugins: [
+          ["@babel/plugin-syntax-decorators", { decoratorsBeforeExport: true }],
+          // ["@babel/plugin-proposal-decorators", { version: "legacy" }],
+        ],
+        babelrc: false,
       },
     }),
   ],

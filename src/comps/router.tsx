@@ -1,6 +1,8 @@
 import { Component, ComponentProps, option } from "@ocean/component";
-import { OcPromise } from "@ocean/promise";
+import { JSX } from "react-dom";
 import { observer } from "@ocean/reaction";
+import { OcPromise } from "@ocean/common";
+import { createElement } from "@ocean/dom";
 declare global {
   namespace Component {
     interface Context {
