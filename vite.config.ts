@@ -1,5 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+// 导入转换require的包
+import requireTransform from "vite-plugin-require-transform";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -7,15 +9,35 @@ export default defineConfig({
     react({
       jsxRuntime: "classic",
       babel: {
-        targets: ["defaults"],
-        exclude: "node_modules/**",
+        targets: {
+          esmodules: true,
+        },
         presets: ["@babel/preset-env", "@babel/preset-typescript"],
         plugins: [
-          ["@babel/plugin-syntax-decorators", { decoratorsBeforeExport: true }],
-          // ["@babel/plugin-proposal-decorators", { version: "legacy" }],
+          [
+            "@babel/plugin-transform-typescript",
+            {
+              allowDeclareFields: true,
+            },
+          ],
+          ["@babel/plugin-proposal-decorators", { version: "legacy" }],
+          // ["@babel/plugin-proposal-class-properties", { loose: true }],
+          // ["@babel/plugin-proposal-private-methods", { loose: true }],
+          // [
+          //   "@babel/plugin-proposal-private-property-in-object",
+          //   { loose: true },
+          // ],
         ],
         babelrc: false,
       },
     }),
+    requireTransform({
+      // 匹配规则
+      fileRegex: /.ts$|.tsx$/,
+    }),
   ],
+  build: {
+    minify: false,
+    sourcemap: true,
+  },
 });
