@@ -250,7 +250,7 @@ class A extends Component<
   }
 }
 
-@component("B")
+@component({})
 class B extends Component<ComponentProps> {
   render() {
     return <div class={this.getClassName()}>B</div>;
