@@ -163,6 +163,7 @@ function createDom(element: any) {
 
 function component(option?: any) {
   return function (ctor: any, context: ClassDecoratorContext) {
+    // TODO 适用装饰器新语法
     if (!context.name || context.kind !== "class") return; // 非类装饰器
     const { componentKeyMap, componentKeyWord, componentEventsKey } =
       getGlobalData("@ocean/component");
