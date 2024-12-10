@@ -20,7 +20,11 @@ export default defineConfig({
               allowDeclareFields: true,
             },
           ],
-          ["@babel/plugin-proposal-decorators", { version: "legacy" }],
+          [
+            "@babel/plugin-proposal-decorators",
+            // version: 'legacy', '2023-11', '2023-05', '2023-01', '2022-03', or '2021-12'
+            { version: "legacy" },
+          ],
           // ["@babel/plugin-proposal-class-properties", { loose: true }],
           // ["@babel/plugin-proposal-private-methods", { loose: true }],
           // [

@@ -6,6 +6,8 @@
     "useDefineForClassFields": true,
     "module": "ESNext",
     "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
 
     /* Bundler mode */
     "moduleResolution": "Bundler",
@@ -14,8 +16,6 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react",
-    "experimentalDecorators": false,
-    // "emitDecoratorMetadata": true,
 
     /* Linting */
     "strict": true,
