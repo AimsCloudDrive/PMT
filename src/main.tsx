@@ -1,10 +1,5 @@
 /** @jsx createElement */
-import {
-  ClassType,
-  JSTypes,
-  OptionDecoratorUsedError,
-  getGlobalData,
-} from "@ocean/common";
+import { ClassType, getGlobalData } from "@ocean/common";
 import {
   Component,
   ComponentEvents,
@@ -12,11 +7,11 @@ import {
   SingleRef,
   component,
   createSingleRef,
-  initComponentOptions,
   option,
 } from "@ocean/component";
 import { createElement, render } from "@ocean/dom";
 import { observer } from "@ocean/reaction";
+import "./index.css";
 
 const singleRef: SingleRef<A> = createSingleRef();
 
@@ -27,18 +22,18 @@ Object.assign(window, {
 
 @component("A", {
   events: {
-    click: "null",
+    click: "object",
   },
 })
 class A extends Component<
   { bclass?: string; AAA?: number; class: ClassType } & ComponentProps,
   {
-    click: null;
+    click: { app: string };
   } & ComponentEvents
 > {
   @option()
   @observer()
-  AAA: number | undefined = 10;
+  AAA!: number;
 
   bclass: string | undefined;
 
@@ -50,14 +45,40 @@ class A extends Component<
   @observer()
   private declare dd: any;
 
-  setJSX(jsx: any) {
-    this.dd = jsx;
-  }
-
   render() {
     return (
-      <div class={this.getClassName()}>
-        <div class={"1"}>{this.AAA}</div>
+      <div
+        class={this.getClassName()}
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          "align-items": "center",
+          "justify-content": "center",
+        }}
+      >
+        <div
+          class={"1"}
+          style={{
+            color: "red",
+            fontSize: "2rem",
+            backgroundColor: "yellow",
+            width: "100px",
+            height: "100px",
+            // 可点击
+            cursor: "pointer",
+            "pointer-events": "all",
+            display: "flex",
+            "align-items": "center",
+            "justify-content": "center",
+          }}
+          onclick={() => {
+            this.AAA = this.AAA + 1;
+            this.emit("click", { app: "AAA" });
+          }}
+        >
+          {this.AAA}
+        </div>
       </div>
     );
   }
@@ -65,11 +86,13 @@ class A extends Component<
 
 const a = (
   <A
+    click={({ app }) => {
+      console.error(app);
+    }}
     $ref={singleRef}
     bclass={"bbb"}
-    AAA={1}
+    AAA={2}
     class={["a", "b"]}
-    click={(pp) => {}}
   ></A>
 );
 
@@ -78,4 +101,4 @@ render(a, document.getElementById("root")!);
 
 Object.assign(window, { A });
 
-// TODO: 更新属性后render的数据没变
+// TODO: 更新属性后render的数据没变 resolved

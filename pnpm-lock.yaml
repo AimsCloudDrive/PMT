@@ -43,14 +43,14 @@ importers:
         specifier: ^0.0.13
         version: 0.0.13
       '@ocean/component':
-        specifier: ^0.0.20
-        version: 0.0.20
+        specifier: ^0.0.24
+        version: 0.0.24
       '@ocean/dom':
-        specifier: ^0.0.11
-        version: 0.0.11
+        specifier: ^0.0.15
+        version: 0.0.15
       '@ocean/reaction':
-        specifier: ^0.0.10
-        version: 0.0.10
+        specifier: ^0.0.12
+        version: 0.0.12
       '@rollup/plugin-babel':
         specifier: ^6.0.4
         version: 6.0.4(@babel/core@7.26.0)(@types/babel__core@7.20.5)(rollup@4.28.1)
@@ -889,14 +889,14 @@ packages:
   '@ocean/common@0.0.13':
     resolution: {integrity: sha512-SB4YxNSF3kDIsmtu4cS84adYE6INbRVr2kSpJM4Tv6dbiRcm2ssOEQq6qx8ZdaM/UuvYNScKyCzSVsnMwtR00A==}
 
-  '@ocean/component@0.0.20':
-    resolution: {integrity: sha512-0Qtwl6omhq62CBFVGT7HGHYwa541bD2+8sYslH94uIoVgXIFhirF5wtqLPrY5c+YsNCOUcJk2cgDCaJglF2qOw==}
+  '@ocean/component@0.0.24':
+    resolution: {integrity: sha512-w+eEoANVg3yGre1A2OL545Xu7b3CF213fGToUSBDKiukUOSn39zmOjYaJ8ThRSREeOzNLK7eDxWjyeVVJU+YgA==}
 
-  '@ocean/dom@0.0.11':
-    resolution: {integrity: sha512-cPygVDZ834ZWTPM2TOW8J0F8QO0Al3tXwEJAAuzfqAx2G+3VvpCBE3Ok/YD40Y45yWdt9NRXO3JQsmqNzsOYYQ==}
+  '@ocean/dom@0.0.15':
+    resolution: {integrity: sha512-l+X+Ma9Wxy4gpGDmI/Lrhc6QeOJEvrCaO71+D4wNC4fHL0E95DNf324n9MG6X9dBbDUDZ3zw3JuJ2xZyAMmytg==}
 
-  '@ocean/reaction@0.0.10':
-    resolution: {integrity: sha512-ek7K9BAmFoQIPShQM+ca+Zjg/BRTNSnGEWnVrn2lgxvyK+xW4jJpmMJuChXYidKxhwIR9nly4zG9utQiv2LaCA==}
+  '@ocean/reaction@0.0.12':
+    resolution: {integrity: sha512-v+bN52v0cgQASdGr+px8ft/HrZdAPm1qGhsXUOvygJtA1ztJ1aEfMTxqDath6zWKUUvxeWeY13xOOg1bvGDp+Q==}
 
   '@rollup/plugin-babel@6.0.4':
     resolution: {integrity: sha512-YF7Y52kFdFT/xVSuVdjkV5ZdX/3YtmX0QulG+x0taQOtJdHYzVU61aSSkAgVJ7NOv6qPkIYiJSgSWWN/DM5sGw==}
@@ -2609,11 +2609,11 @@ snapshots:
     dependencies:
       '@ocean/common': 'pmt@file:'
 
-  '@ocean/component@0.0.20': {}
+  '@ocean/component@0.0.24': {}
 
-  '@ocean/dom@0.0.11': {}
+  '@ocean/dom@0.0.15': {}
 
-  '@ocean/reaction@0.0.10': {}
+  '@ocean/reaction@0.0.12': {}
 
   '@rollup/plugin-babel@6.0.4(@babel/core@7.26.0)(@types/babel__core@7.20.5)(rollup@4.28.1)':
     dependencies:
