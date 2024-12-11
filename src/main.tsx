@@ -48,7 +48,7 @@ class A extends Component<
   render() {
     return (
       <div
-        class={this.getClassName()}
+        class={[this.getClassName(), "AAA"]}
         style={{
           width: "100%",
           height: "100%",
@@ -84,16 +84,38 @@ class A extends Component<
   }
 }
 
+@component("B")
+class B extends Component {
+  @option()
+  @observer()
+  BBB!: number;
+  @observer()
+  content!: any;
+  render() {
+    return (
+      <div class={[this.getClassName(), "BBB"]}>
+        {this.BBB}
+        <div class={"content"}>{this.content}</div>
+      </div>
+    );
+  }
+  setJSX(jsx): void {
+    this.content = jsx;
+  }
+}
+
 const a = (
-  <A
-    click={({ app }) => {
-      console.error(app);
-    }}
-    $ref={singleRef}
-    bclass={"bbb"}
-    AAA={2}
-    class={["a", "b"]}
-  ></A>
+  <B>
+    <A
+      click={({ app }) => {
+        console.error(app);
+      }}
+      $ref={singleRef}
+      bclass={"bbb"}
+      AAA={2}
+      class={["a", "b"]}
+    ></A>
+  </B>
 );
 
 render(a, document.getElementById("root")!);
