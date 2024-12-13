@@ -2,10 +2,6 @@
 import { createElement } from "@ocean/dom";
 import { Component, ComponentProps } from "@ocean/component";
 import { Location } from "./Location";
-import * as reaction from "@ocean/reaction";
-
-Object.assign(window, { reaction });
-
 type AppProps = ComponentProps & { routes: any };
 
 export class App extends Component<AppProps> {
@@ -19,6 +15,7 @@ export class App extends Component<AppProps> {
     this.location = new Location({
       url: location.href,
     });
+    this.getContext("location");
   }
 
   whatPage() {}
@@ -42,7 +39,7 @@ export class App extends Component<AppProps> {
   }
 
   render() {
-    return this.mainPage();
+    return <div class={[this.getClassName(), "App"]}>this.mainPage();</div>;
   }
   componentDidMount(): void {}
 }

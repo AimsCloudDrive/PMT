@@ -40,14 +40,14 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0
       '@ocean/common':
-        specifier: ^0.0.13
-        version: 0.0.13
-      '@ocean/component':
-        specifier: ^0.0.24
-        version: 0.0.24
-      '@ocean/dom':
         specifier: ^0.0.15
         version: 0.0.15
+      '@ocean/component':
+        specifier: ^0.0.25
+        version: 0.0.25
+      '@ocean/dom':
+        specifier: ^0.0.16
+        version: 0.0.16
       '@ocean/reaction':
         specifier: ^0.0.12
         version: 0.0.12
@@ -886,14 +886,14 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@ocean/common@0.0.13':
-    resolution: {integrity: sha512-SB4YxNSF3kDIsmtu4cS84adYE6INbRVr2kSpJM4Tv6dbiRcm2ssOEQq6qx8ZdaM/UuvYNScKyCzSVsnMwtR00A==}
+  '@ocean/common@0.0.15':
+    resolution: {integrity: sha512-ig2BaluXZO/lZMuyiAp8IBJCfhuoxW2IOu4rMWtT8C+T0+6l7CR4yrnHW9nC08n1mhtEdBP9579Wd4t3WLELCw==}
 
-  '@ocean/component@0.0.24':
-    resolution: {integrity: sha512-w+eEoANVg3yGre1A2OL545Xu7b3CF213fGToUSBDKiukUOSn39zmOjYaJ8ThRSREeOzNLK7eDxWjyeVVJU+YgA==}
+  '@ocean/component@0.0.25':
+    resolution: {integrity: sha512-zx1MujYdOsyqDPK2nyPTNvKsS3unay1Tk5wect/+ZvLzPN6yGQ047e++k0MNOkjKvQswj8aZ0J+9CMesb/dmgQ==}
 
-  '@ocean/dom@0.0.15':
-    resolution: {integrity: sha512-l+X+Ma9Wxy4gpGDmI/Lrhc6QeOJEvrCaO71+D4wNC4fHL0E95DNf324n9MG6X9dBbDUDZ3zw3JuJ2xZyAMmytg==}
+  '@ocean/dom@0.0.16':
+    resolution: {integrity: sha512-0ouE6jCNLCwriRMtERyCLUrrp0DTojA9biKRUjNd+SAbQeVUWjPhapYXiMFNCmfdIPwUArbfqYUs4jJzWx9z5g==}
 
   '@ocean/reaction@0.0.12':
     resolution: {integrity: sha512-v+bN52v0cgQASdGr+px8ft/HrZdAPm1qGhsXUOvygJtA1ztJ1aEfMTxqDath6zWKUUvxeWeY13xOOg1bvGDp+Q==}
@@ -2605,13 +2605,13 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@ocean/common@0.0.13':
+  '@ocean/common@0.0.15':
     dependencies:
       '@ocean/common': 'pmt@file:'
 
-  '@ocean/component@0.0.24': {}
+  '@ocean/component@0.0.25': {}
 
-  '@ocean/dom@0.0.15': {}
+  '@ocean/dom@0.0.16': {}
 
   '@ocean/reaction@0.0.12': {}
 

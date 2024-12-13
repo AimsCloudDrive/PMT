@@ -9,9 +9,6 @@ export default defineConfig({
     react({
       jsxRuntime: "classic",
       babel: {
-        targets: {
-          esmodules: true,
-        },
         presets: ["@babel/preset-env", "@babel/preset-typescript"],
         plugins: [
           [

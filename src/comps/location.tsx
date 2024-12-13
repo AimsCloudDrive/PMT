@@ -1,10 +1,7 @@
-import {
-  Component,
-  ComponentProps,
-  ComponentEvents,
-  component,
-  option,
-} from "@ocean/component";
+/** @jsx createElement */
+
+import { Component, ComponentProps, component, option } from "@ocean/component";
+import { createElement } from "@ocean/dom";
 import { observer } from "@ocean/reaction";
 declare global {
   namespace Component {
