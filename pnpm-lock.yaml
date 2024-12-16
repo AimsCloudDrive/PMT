@@ -40,8 +40,8 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0
       '@ocean/app':
-        specifier: ^0.0.5
-        version: 0.0.5
+        specifier: ^0.0.7
+        version: 0.0.7
       '@ocean/common':
         specifier: ^0.0.15
         version: 0.0.15
@@ -49,14 +49,14 @@ importers:
         specifier: ^0.0.27
         version: 0.0.27
       '@ocean/dom':
-        specifier: ^0.0.18
-        version: 0.0.18
+        specifier: ^0.0.23
+        version: 0.0.23
       '@ocean/reaction':
         specifier: ^0.0.13
         version: 0.0.13
       '@ocean/ui':
-        specifier: ^0.0.3
-        version: 0.0.3
+        specifier: ^0.0.8
+        version: 0.0.8
       '@rollup/plugin-babel':
         specifier: ^6.0.4
         version: 6.0.4(@babel/core@7.26.0)(@types/babel__core@7.20.5)(rollup@4.28.1)
@@ -892,8 +892,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@ocean/app@0.0.5':
-    resolution: {integrity: sha512-HolxQBCTHTgsndLpSBRmK7q1Qu3Rlo1gUNU+WTgw4x6UIdqZInVi4x37AvCDhVYqTt+yxhnF/u26rjgRVdGkWQ==}
+  '@ocean/app@0.0.7':
+    resolution: {integrity: sha512-wL7lX4xOJc8rFN7wLItSjY/Ly9kGQib8iM3FbWPkCHFARl/GEdXbHzLhvDuzDnpHf1ZowiNiJhWzy69Y1VBg6Q==}
 
   '@ocean/common@0.0.15':
     resolution: {integrity: sha512-ig2BaluXZO/lZMuyiAp8IBJCfhuoxW2IOu4rMWtT8C+T0+6l7CR4yrnHW9nC08n1mhtEdBP9579Wd4t3WLELCw==}
@@ -901,14 +901,14 @@ packages:
   '@ocean/component@0.0.27':
     resolution: {integrity: sha512-4fPDDGzikxcD+EDc6H/Nqv1W4eWpXrGiSYrYQaFn8X5Y+Jm75otzXRPZ98Fbr2Hoiqgk4muiFWnBTcKxfTYfwQ==}
 
-  '@ocean/dom@0.0.18':
-    resolution: {integrity: sha512-n+S1koGARRemB8iqLlFkzNWewWN/QpLiPLW4XZpLDE9Hir/Xt4WmCyBU6jLtKwvVnYc0lIpXa57++ttmHAH9VA==}
+  '@ocean/dom@0.0.23':
+    resolution: {integrity: sha512-jWsEo9JlqpJXdRx7HOHWZX765rr5pw5AJ9/H27fN2K7ek2/ACw56lJKnl4fFIB1Ld/5kO/8GEi0leUUnqmig6Q==}
 
   '@ocean/reaction@0.0.13':
     resolution: {integrity: sha512-q0uv7l9HSGQw3ok5BfYlY+wXtS9ZFOYuk/bK7G4add/3YyR7YQPf67biAjzNPuxcFA4WHAWi5gV+ATqNQsHcyA==}
 
-  '@ocean/ui@0.0.3':
-    resolution: {integrity: sha512-NYj/gKExBFHiezuwd+WmUwOaxv0aaERxEHS20Ok0fOesrzxJdlQanHCX4DduNXKk4GZvuCM/UUk6qOmaw1YCNA==}
+  '@ocean/ui@0.0.8':
+    resolution: {integrity: sha512-R8DM9qEOCa273my9iXFZsDuDFTadmJF91U3yoMhR8qX9fshDkjHgD2jGTjNjSSBLMJJiWAwuAa9DPmFzsA6TPQ==}
 
   '@rollup/plugin-babel@6.0.4':
     resolution: {integrity: sha512-YF7Y52kFdFT/xVSuVdjkV5ZdX/3YtmX0QulG+x0taQOtJdHYzVU61aSSkAgVJ7NOv6qPkIYiJSgSWWN/DM5sGw==}
@@ -2617,7 +2617,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@ocean/app@0.0.5':
+  '@ocean/app@0.0.7':
     dependencies:
       '@ocean/app': 'pmt@file:'
 
@@ -2627,11 +2627,11 @@ snapshots:
 
   '@ocean/component@0.0.27': {}
 
-  '@ocean/dom@0.0.18': {}
+  '@ocean/dom@0.0.23': {}
 
   '@ocean/reaction@0.0.13': {}
 
-  '@ocean/ui@0.0.3':
+  '@ocean/ui@0.0.8':
     dependencies:
       '@ocean/ui': 'pmt@file:'
 
